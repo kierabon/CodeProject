@@ -11,32 +11,27 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <script src="weather-script.js"></script>
-    "
-    <script
-      src="https://kit.fontawesome.com/00d1a0d21a.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <link rel="stylesheet" href="weather-style.css" />
   </head>
   <body>
     <h2>Today In...</h2>
-    <form class="bg-light" id="search-form">
-      <input
-        type="text"
-        placeholder="Search for a city"
-        id="search-text-input"
-      />
-      <input type="submit" value="search" />
-    </form>
-    <button type="button" class="btn btn-info" id="location-button">
-      Current Location
-    </button>
+    <div class="form">
+      <form class="bg-light" id="search-form">
+        <input
+          type="text"
+          placeholder="Search for a city"
+          id="search-text-input"
+        />
+        <input type="submit" value="search" />
+      </form>
+      <button type="button" class="btn btn-info" id="location-button">
+        Current Location
+      </button>
+    </div>
     <div class="container position-relative w-50" id="card">
       <h1 id="city-check">Houston</h1>
-      <h5 class="date" id="date">Thurday 6:14 june 2</h5>
+      <h5 class="date" id="date">Thursday 6:14 june 2</h5>
       <ul id="details">
         <li id="humidity">Humidity : 14%</li>
         <li id="wind-speed">Wind: 8 km/s</li>
@@ -44,8 +39,8 @@
       </ul>
       <span class="temperature" id="temperature"> 🌤 27</span>
       <span class="units" id="units">
-        <a href="#" id="celsius-link"> ℃ </a> |
-        <a href="#" id="fahrenheit-link"> ℉ </a>
+        <a href="#" id="celsius-link"> ℃ </a>
+        <!-- <a href="#" id="fahrenheit-link"> ℉ </a> -->
       </span>
       <ul
         class="list-group list-group-horizontal-md border-5 rounded"
@@ -116,5 +111,6 @@
         </li>
       </ul>
     </div>
+    <script src="weather-script.js"></script>
   </body>
 </html>

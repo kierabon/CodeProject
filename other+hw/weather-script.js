@@ -23,7 +23,10 @@ let months = [
   "December"
 ];
 let month = months[now.getMonth()];
-
+let form = document.querySelector ('#search-form');
+let h5 = document.querySelector(`#date`);
+h5.innerHTML= `${day} ${month} ${date}, ${year}  ${hours}:${minutes}`;
+ 
 
 
 function showWeather(response) {
@@ -53,7 +56,7 @@ function weatherLocation(position) {
   axios.get(url).then(showWeather);
 }
 
-function getCurrentPosition() {
+function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(weatherLocation);
 }
 
@@ -68,12 +71,9 @@ function getCitySearch(event) {
   axios.get(url).then(showWeather);
 }
 
-let button = document.querySelector("#location-button");
-let form = document.querySelector("#search-form");
-let h5 = document.querySelector("#date");
+let button = document.querySelector("button");
 
-button.addEventListener("click",getCurrentPosition);
+button.addEventListener("click", getCurrentPosition);
 form.addEventListener("submit",getCitySearch);
-h5.innerHTML =`${day} ${month} ${date}, ${year}; ${hours}:${minutes}`;
- 
+
 
