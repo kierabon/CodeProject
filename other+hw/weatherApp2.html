@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="weather-script.js"></script>
+    "
+    <script
+      src="https://kit.fontawesome.com/00d1a0d21a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="weather-style.css" />
+  </head>
+  <body>
+    <h2>Today In...</h2>
+    <form class="bg-light" id="search-form">
+      <input
+        type="text"
+        placeholder="Search for a city"
+        id="search-text-input"
+      />
+      <input type="submit" value="search" />
+    </form>
+    <button type="button" class="btn btn-info" id="location-button">
+      Current Location
+    </button>
+    <div class="container position-relative w-50" id="card">
+      <h1 id="city-check">Houston</h1>
+      <h5 class="date" id="date">Thurday 6:14 june 2</h5>
+      <ul id="details">
+        <li id="humidity">Humidity : 14%</li>
+        <li id="wind-speed">Wind: 8 km/s</li>
+        <li id="description">Percipitation: 45%</li>
+      </ul>
+      <span class="temperature" id="temperature"> 🌤 27</span>
+      <span class="units" id="units">
+        <a href="#" id="celsius-link"> ℃ </a> |
+        <a href="#" id="fahrenheit-link"> ℉ </a>
+      </span>
+      <ul
+        class="list-group list-group-horizontal-md border-5 rounded"
+        id="table-weather"
+      >
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Sun</h2>
+            <h3>19°F</h3>
+          </div>
+          <div class="col">
+            <h4>🌧</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Mon</h2>
+            <h3>45°F</h3>
+          </div>
+          <div class="col">
+            <h4>⛈</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Tues</h2>
+            <h3>37℉</h3>
+          </div>
+          <div class="col">
+            <h4>🌦</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Wed</h2>
+            <h3>42°F</h3>
+          </div>
+          <div class="col">
+            <h4>⛅</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Thurs</h2>
+            <h3>29°F</h3>
+          </div>
+          <div class="col">
+            <h4>❄</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Fri</h2>
+            <h3>39°F</h3>
+          </div>
+          <div class="col">
+            <h4>🌨</h4>
+          </div>
+        </li>
+        <li class="list-group-item .flex-fill">
+          <div class="col">
+            <h2>Sat</h2>
+            <h3>22°F</h3>
+          </div>
+          <div class="col">
+            <h4>🌤</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
